@@ -1,12 +1,14 @@
 #body{
-    background: linear-gradient(blue , grey );
+    background: linear-gradient(red , grey );
     height: 100vh;
     width: 100vw;
+    text-align: center;
 }
 #tipForm{
     background: antiquewhite;
     width: 70vw;
-    display: block;
+    display: inline-grid;
     padding: 20px;
-    margin-top: 50px;
+    align-self: center;
+    
 }
