@@ -1,9 +1,9 @@
-//document.getElementById('results').style.display = "none";
+document.getElementById('results').style.display = "none";
 
 function calculateTip() {
-    let billAmount = document.getElementById('billTotal').value;
+    let billAmount = Number(document.getElementById('billTotal').value);
 
-    let numOfGuests = document.getElementById('numGuests').value;
+    let numOfGuests = Number(document.getElementById('numGuests').value);
 
     let serviceQuality = document.getElementById('service').value;
     let tipPercent = 0;
@@ -16,20 +16,26 @@ function calculateTip() {
     } else if(serviceQuality === "poor"){
         tipPercent = .05;
     }
-    console.log(tipPercent);
     if( tipPercent == 0){
-        console.log(billAmount);
+        document.getElementById('tip').textContent = tipPercent;
         let total = billAmount;
+        document.getElementById('total').textContent = total;
+        document.getElementById('tipPP').textContent = tipPercent;
+        document.getElementById('totalPP').textContent = (total /numOfGuests);
     }else{
         let tipAmount = billAmount * tipPercent;
         tipAmount = tipAmount.toFixed(2);
-        document.getElementById('tip').innerHTML = tipAmount;
+        document.getElementById('tip').textContent = tipAmount;
         let total= 0;
         total= billAmount * ( 1 + tipPercent);
         total = total.toFixed(2);
-        document.getElementById('total').innerHTML = total;
+        document.getElementById('total').textContent = total;
+        
+        document.getElementById('tipPP').textContent = (tipAmount/ numOfGuests);
+        document.getElementById('totalPP').textContent = (total /numOfGuests);
+        document.getElementById('results').style.display = "block";
     }
-
+    
 }
 
 document.getElementById('tipButton').addEventListener("click", calculateTip);
