@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+
+<html lang="eng">
+
+<head>
+    <title>Tip calculator</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tip calculator app</h1>
+
+    </header>
+
+    <main>
+        
+        <form id="tipForm">
+            <label for="BillTotal"> Total of Bill</label>
+            <input type="text" id="billTotal" name="BillTotal">
+
+            <label for="service"> How was the service</label>
+            <select id="service" name="service">
+                   
+                    <option value="veryGood">Very good -20%</option>
+
+                    <option value="good">good -15%</option>
+
+                    <option value="fair">fair -10%</option>
+                    
+                    <option value="poor">poor -5%</option>
+                    
+                    <option value="terrible">terrible -0%</option>
+                
+                </select>
+            <label for="numberOfGuests">Number of people splitting the bill</label>
+            <input type="text" id="numGuests" name="numberOfGuests">
+
+            <button id= "tipButton">Calculate Tip</button>
+
+            <div id="results">
+                <h5>Tip amount: <span id="tip"></span></h5>
+                <h5>Total amount: <span id="total"></span></h5>
+                <hr>
+                <h5>Tip amount per person: <span id="tipPP"></span></h5>
+                <h5>Total per person Amount: <span id="totalPP"></span></h5>
+            </div>
+        </form>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
