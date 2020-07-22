@@ -11,16 +11,16 @@
 <body>
     
 
-    <main id = "body">
+    <main id = "pageBody">
 
         <h1>Tip calculator app</h1>
         
         <div id="tipForm">
             <label for="BillTotal"> Total of Bill</label>
-            <input type="text" id="billTotal" name="BillTotal" placeholder="Please enter the bill total">
+            <input type="text" id="billTotal" class="tipFormElements"name="BillTotal" placeholder="Please enter the bill total">
 
             <label for="service"> How was the service</label>
-            <select id="service" name="service">
+            <select id="service" class="tipFormElements" name="service">
                    
                     <option value="veryGood">Very good -20%</option>
 
@@ -34,9 +34,9 @@
                 
                 </select>
             <label for="numberOfGuests">Number of people splitting the bill</label>
-            <input type="text" id="numGuests" name="numberOfGuests" placeholder="Number of people splitting the bill">
+            <input type="text" id="numGuests" class="tipFormElements" name="numberOfGuests" placeholder="Number of people splitting the bill">
 
-            <button id= "tipButton">Calculate Tip</button>
+            <button id= "tipButton" >Calculate Tip</button>
 
             <div id="results">
                 <h5>Tip amount: <span id="tip"></span></h5>

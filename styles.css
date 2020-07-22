@@ -1,14 +1,48 @@
-#body{
-    background: linear-gradient(red , grey );
+body{
+    margin: 0;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#pageBody{
+    background: radial-gradient( #374657, #3d5570 );
     height: 100vh;
     width: 100vw;
     text-align: center;
+    padding-top: 60px;
 }
 #tipForm{
-    background: antiquewhite;
     width: 70vw;
     display: inline-grid;
-    padding: 20px;
-    align-self: center;
-    
+    padding: 5px;
+    justify-content: center;
+}
+
+.tipFormElements{
+    margin: 20px 0px;
+    height: 2em;
+    width: 30vw;
+    justify-content: center;
+}
+
+#tipButton{
+    width: 20vw;
+    background-color: #9bc8fa;
+    height: 2.5em;
+    border-radius: 10px;
+    justify-self: center;
+}
+
+h1{
+    font-size: 3em;
+}
+
+label{
+    font-size: 2em;
+}
+
+input, select{
+    border-radius: 10px;
+    justify-self: center;
 }
